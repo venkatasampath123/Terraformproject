@@ -30,7 +30,7 @@ pipeline {
         stage('Terraform Apply') {
             steps {
                 input message: 'Create AWS infrastructure?'
-                sh 'terraform apply -auto-approve'
+                sh 'terraform $mychoice -auto-approve'
             }
         }
     }
